@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Insert assertion &quot;all method parameters are not null&quot;"
+            id="com.ashigeru.eclipse.util.jdt.insertAssertion"
+            name="Insert assertion">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.ashigeru.eclipse.util.jdt.insertAssertion">
+         <class
+               class="com.ashigeru.eclipse.util.jdt.internal.ui.handlers.InsertAssertionHandler"></class>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.ashigeru.eclipse.util.jdt.insertAssertion"
+            contextId="org.eclipse.jdt.ui.javaEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+1">
+      </key>
+   </extension>
+
+</plugin>
