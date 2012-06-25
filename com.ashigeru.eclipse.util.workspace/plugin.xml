@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="com.ashigeru.eclipse.util.workspace.application"
+         name="Workspace Operation"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="com.ashigeru.eclipse.util.workspace.applications.Main">
+         </run>
+      </application>
+   </extension>
+
+</plugin>
